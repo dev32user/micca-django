@@ -15,4 +15,9 @@
       - 유저 간의 채팅
      
 ## ERD diagram
-https://www.erdcloud.com/d/38hvuASnKZuqjgnsY
+
+![micca-django](https://user-images.githubusercontent.com/87305038/214801100-ec81769b-bd7f-48bc-8989-adac76df305f.png)
+
+link : [https://www.erdcloud.com/d/38hvuASnKZuqjgnsY](https://www.erdcloud.com/d/38hvuASnKZuqjgnsY)
+
+<iframe width="800" height="600" src="https://www.erdcloud.com/p/38hvuASnKZuqjgnsY" frameborder="0" allowfullscreen></iframe>
