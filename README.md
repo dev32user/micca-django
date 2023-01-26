@@ -13,3 +13,6 @@
     - 채팅
       - 관리자와 고객 간의 상담 채팅
       - 유저 간의 채팅
+     
+## ERD diagram
+https://www.erdcloud.com/d/38hvuASnKZuqjgnsY
