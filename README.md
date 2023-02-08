@@ -1,6 +1,6 @@
 # 장고 프로젝트입니다. 
 
-## 팀원
+## 개발2팀 팀원
 - [dev32user](https://github.com/dev32user)
 - [ongiv](https://github.com/ongiv/)
 
