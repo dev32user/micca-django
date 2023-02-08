@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2>게시판</h2>
+<a href='/post/new/'>New</a>
+        {%  for post in posts %}
+        <h2>제목 : {{ post.title }}</h2>
+        <h2>내용 : {{ post.body }}</h2>
+            <a href='/post/{{ post.pk }}/'>DETAIL</a>
+    {% endfor %}
+{% endblock %}
