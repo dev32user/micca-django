@@ -5,6 +5,7 @@
 ### 팀원
 - [dev32user](https://github.com/dev32user)
 - [ongiv](https://github.com/ongiv/)
+- [Young-K-96](https://github.com/Young-K-96)
 
 ## 기획
 ![flow_chart.png](/flow_chart.png)
