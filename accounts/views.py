@@ -1,10 +1,9 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 
-from common.forms import UserCreateForm
+from accounts.forms import UserCreateForm
 
 
-# Create your views here.
 def signup(request):
     if request.method == "POST":
         form = UserCreateForm(request.POST)
