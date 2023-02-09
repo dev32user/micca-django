@@ -5,9 +5,19 @@
             {% csrf_token %}
             {% include "form_errors.html" %}
             <div class="mb-3">
-                <label for="username">사용자 이름</label>
+                <label for="username">닉네임</label>
                 <input type="text" class="form-control" name="username" id="username"
                        value="{{ form.username.value|default_if_none:'' }}">
+            </div>
+            <div class="mb-3">
+                <label for="first_name">(선택) 이름</label>
+                <input type="text" class="form-control" name="first_name" id="first_name"
+                       value="{{ form.first_name.value|default_if_none:'' }}">
+            </div>
+            <div class="mb-3">
+                <label for="last_name">(선택) 성</label>
+                <input type="text" class="form-control" name="last_name" id="last_name"
+                       value="{{ form.last_name.value|default_if_none:'' }}">
             </div>
             <div class="mb-3">
                 <label for="password1">비밀번호</label>
@@ -23,6 +33,8 @@
                 <label for="email">이메일</label>
                 <input type="text" class="form-control" name="email" id="email"
                        value="{{ form.email.value|default_if_none:'' }}">
+            </div>
+            <div class="mb-3">
                 <button type="submit" class="btn btn-dark">생성하기</button>
             </div>
         </form>
