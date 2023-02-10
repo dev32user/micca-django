@@ -16,7 +16,7 @@ class Post(models.Model):
     # writer = models.CharField(max_length=20)
     # 5. 본문
     body = models.TextField()
-    #
+    # 6. 수정 일시
     modify_date = models.DateTimeField(null=True, blank=True)
 
     # 게시글의 이름을 title로 선언

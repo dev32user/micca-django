@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.urls import path, include
-from post.views import *
+from forum.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('common/', include('common.urls')),
-    path('post/', include('post.urls')),
-    # path('post/', article, name="article"),
+    path('forum/', include('forum.urls')),
+    # path('forum/', article, name="article"),
 ]

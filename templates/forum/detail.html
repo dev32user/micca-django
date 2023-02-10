@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Detail</h2>
+    <p>글 번호 : {{ post.id }}</p>
+    <h1>제목 : {{ post.title }}</h1>
+    <p>내용 : {{ post.body }}</p>
+    <p>작성일자 : {{ post.created_at }}</p>
+    <a href="/forum/{{ post.pk }}/delete/">Delete</a>
+    <br>
+    <a href="/forum">Back</a>
+{% endblock %}
