@@ -1,9 +1,11 @@
-from django.shortcuts import render
-from django.shortcuts import redirect
+from django.shortcuts import render,redirect
 from .models import Post
 from .forms import PostForm
 from django.http import HttpResponse
 
+
+def home(request):
+    return render(request, 'forum/home.html')
 
 def article(request):
     posts = Post.objects.all()
