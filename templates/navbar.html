@@ -15,6 +15,9 @@
                     <a class="nav-link" href="{% url 'site_home' %}">홈</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'forum:home' %}">포럼</a>
+                </li>
+                <li class="nav-item">
                     {% if user.is_authenticated %}
                         <a class="nav-link" href="{% url 'accounts:logout' %}">{{ user.username }} (로그아웃)</a>
                     {% else %}
