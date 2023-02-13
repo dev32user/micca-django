@@ -1,4 +1,5 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
@@ -21,3 +22,8 @@ def signup(request):
 
 def change_password(request):
     return HttpResponse("비밀번호 변경 메서드 실행 상태입니다.")
+
+
+def get_member(request, member_id):
+    user = User.objects.get(id=member_id)
+    return render(request, 'accounts/profile.html', {'user': user})
