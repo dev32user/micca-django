@@ -1,6 +1,6 @@
 # /accounts
 
-## 회원가입
+## 회원가입 : signup
 
 ### /accounts/signup
 
@@ -15,7 +15,7 @@
     - 성
     - 이름
 
-## 로그인
+## 로그인 : login
 
 ### /accounts/login
 
@@ -25,7 +25,7 @@
     - 사용자 ID
     - 비밀번호
 
-## 로그아웃
+## 로그아웃 : logout
 
 ### /accounts/logout
 
