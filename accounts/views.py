@@ -27,11 +27,15 @@ def change_password(request):
 
 
 @login_required(login_url='accounts:login')
-def get_member(request, member_id):
+def get_member(request, member_id=None):
+    if member_id is None:
+        member_id = request.user.id
+
     user = User.objects.get(id=member_id)
     return render(request, 'accounts/profile.html', {'get_user': user})
 
 
 @login_required(login_url='accounts:login')
 def update_member(request):
+    print(request.user)
     return render(request, 'accounts/profile_change.html')

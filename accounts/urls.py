@@ -12,6 +12,7 @@ urlpatterns = [
     path('change-password/',
          auth_views.PasswordChangeView.as_view(template_name='accounts/pw_change.html'),
          name='pw_change'),
-    path('profile/<int:member_id>', views.get_member, name='get_member'),
+    path('profile/<int:member_id>/', views.get_member, name='get_member'),
+    path('profile/', views.get_member, name='get_member'),
     path('change-profile/', views.update_member, name='profile_change'),
 ]
