@@ -1,5 +1,5 @@
-from django.urls import path
 from django.contrib.auth import views as auth_views
+from django.urls import path
 
 from accounts import views
 
@@ -13,4 +13,5 @@ urlpatterns = [
          auth_views.PasswordChangeView.as_view(template_name='accounts/pw_change.html'),
          name='pw_change'),
     path('profile/<int:member_id>', views.get_member, name='get_member'),
+    path('change-profile/', views.update_member, name='profile_change'),
 ]

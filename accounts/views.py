@@ -1,6 +1,6 @@
-from django.contrib.auth import authenticate, login, get_user_model
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from accounts.forms import UserCreateForm
@@ -18,12 +18,20 @@ def signup(request):
             return redirect('site_home')
     else:
         form = UserCreateForm()
-    return render(request, 'accounts/signup.html', {'form':form})
+    return render(request, 'accounts/signup.html', {'form': form})
 
+
+@login_required(login_url='accounts:login')
 def change_password(request):
-    return HttpResponse("비밀번호 변경 메서드 실행 상태입니다.")
+    return render(request, 'accounts/pw_change.html')
 
 
+@login_required(login_url='accounts:login')
 def get_member(request, member_id):
     user = User.objects.get(id=member_id)
-    return render(request, 'accounts/profile.html', {'user': user})
+    return render(request, 'accounts/profile.html', {'get_user': user})
+
+
+@login_required(login_url='accounts:login')
+def update_member(request):
+    return render(request, 'accounts/profile_change.html')

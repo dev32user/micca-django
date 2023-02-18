@@ -2,5 +2,10 @@
 
 {% block content %}
     <h2>여기는 유저 프로필 페이지입니다. </h2>
-    {{ user.email }}
+    {{ get_user.email }}
+    {{ get_user.id }}
+
+    {% if user.id == get_user.id %}
+        <a href="{% url 'accounts:profile_change' %}" class="btn btn-dark">프로필 수정</a>
+    {% endif %}
 {% endblock %}
