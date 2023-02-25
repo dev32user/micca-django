@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content %}
+<div class="container my-3">
+    <div class="btn-group" role="group" aria-label="Product control">
+        <button class="btn btn-primary" onclick="history.back();">뒤로가기</button>
+        <button class="btn btn-primary" onclick="location.href='/shop/{{ detail.id }}/delete'">삭제</button>
+    </div>
+
+</div>
+<div class="container">
+    <div class="text-center">
+        <h4>{{ detail.content }}</h4>
+    </div>
+    <div class="text-center">
+        <img src="{{ detail.imgfile.url }}" width="300" height="300" >
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">제품 가격 : {{ detail.price | intcomma }} 원</li>
+        <li class="list-group-item">재고 수량 : {{ detail.stock }} 개</li>
+        <li class="list-group-item">제품 설명 : {{ detail.product_detail }}</li>
+    </ul>
+</div>
+
+{% endblock %}
