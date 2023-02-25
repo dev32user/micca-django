@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content %}
+<div class="text-center">
+    <h2>제품목록</h2>
+</div>
+<div class = 'container my-3'>
+    <table class="table">
+        <thead>
+        <tr class="text-center thead-light">
+            <th scope="col">번호</th>
+            <th scope="col">제품명</th>
+            <th scope="col">가 격</th>
+            <th scope="col">재고수량</th>
+        </tr>
+        </thead>
+        <tbody class="text-center text-dark">
+            {% for product in products %}
+            <tr>
+                <th scope="col">{{ product.id }}</th>
+                <th><a href="{{ product.pk }}/">{{ product.content }}</a></th>
+                <th>{{ product.price | intcomma}} 원</th>
+                <th>{{ product.stock }} 개</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <button onclick="location.href='/shop/create/'">제품 등록</button>
+</div>
+{% endblock %}

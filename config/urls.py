@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from forum import views as forum_views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('', forum_views.home, name='site_home'),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
-    path('forum/', include('forum.urls'))
+    path('forum/', include('forum.urls')),
+    path('shop/', include('shop.urls')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
