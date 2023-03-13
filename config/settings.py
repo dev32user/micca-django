@@ -51,9 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.humanize',
     'forum.apps.ForumConfig',
-    'shop.apps.ShopConfig',
 ]
 
 MIDDLEWARE = [
@@ -143,7 +141,3 @@ LOGIN_REDIRECT_URL = '/'
 
 # 로그아웃 후 이동하는 URL
 LOGOUT_REDIRECT_URL = '/'
-
-# 이미지 파일 저장을 위한 경로 설정
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
